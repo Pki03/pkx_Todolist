@@ -1,0 +1,52 @@
+<%- include('header.ejs') %>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    </head>
+    <body>
+<div  class="box"  id="heading"><h1 style="color: blueviolet;"><%=listtitle%></h1>
+</div>
+    
+<div class="box">
+
+
+    <% for(var i = 0;i<newlistitems.length;i++)
+    {
+        
+        %>
+        <div class="item">
+
+            <input type="checkbox">
+            <p><%= newlistitems[i].name %><p>
+
+
+        </div>
+        
+        <%
+    }%>
+
+
+
+
+
+    <form action="/"  method="post">
+
+        <input type="text"  name="newitem" ,  placeholder="new item">
+        <button type="submit"  ,  name="list"  , value= <%=listtitle%>>+</button>
+    
+    
+    
+    </form>
+            
+</div>        
+
+           
+
+        
+        <script src="" async defer></script>
+
+
+<%- include('footer.ejs') %>
+
+
